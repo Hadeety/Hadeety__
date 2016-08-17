@@ -16,9 +16,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit Profile"
+        android:textAlignment="textStart"
         android:id="@+id/editprofile_butt"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@null"/>
+     <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/change_pass_butt"
+         android:layout_below="@+id/editprofile_butt"
+         android:text="Change Password"
+         android:textAlignment="textStart"
+         android:background="@null"
+         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/change_email_butt"
+        android:layout_below="@+id/change_pass_butt"
+        android:text="Change Email"
+        android:textAlignment="textStart"
+        android:background="@null"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/change_username_butt"
+        android:layout_below="@+id/change_email_butt"
+        android:text="change username"
+        android:textAlignment="textStart"
+        android:background="@null"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_butt"
+        android:layout_below="@+id/change_username_butt"
+        android:text="Logout"
+        android:textAlignment="textStart"
+        android:background="@null"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutus_butt"
+        android:layout_below="@+id/logout_butt"
+        android:text="About us"
+        android:textAlignment="textStart"
+        android:background="@null"/>
+
 </RelativeLayout>
