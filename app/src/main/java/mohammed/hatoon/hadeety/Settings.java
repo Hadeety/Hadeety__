@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -36,8 +37,72 @@ public class Settings extends AppCompatActivity
         ActionBar actionbar= getSupportActionBar();
         actionbar.setTitle("Settings");
 
+        Button editProfileB=(Button)findViewById(R.id.editprofile_butt);
+        Button changePassB=(Button)findViewById(R.id.change_pass_butt);
+        Button changeEmailB =(Button)findViewById(R.id.change_email_butt);
+        Button changeUsernameB=(Button)findViewById(R.id.change_username_butt);
+        Button logoutB=(Button)findViewById(R.id.logout_butt);
+        Button aboutusB =(Button)findViewById(R.id.aboutus_butt);
 
+        //edit profile button click action starts
 
+       editProfileB.setOnClickListener(new View.OnClickListener(){
+           public void onClick(View v) {
+              // code here
+
+           }
+
+       });
+
+        //change password button click action starts
+
+        changePassB.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // code here
+            }
+        });
+//change email button click action starts
+
+        changeEmailB.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // code here
+            }
+        });
+
+        //change user name button click action starts
+
+        changeUsernameB.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // code here
+            }
+        });
+
+        //logout button click action starts
+
+        logoutB.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // code here
+            }
+        });
+
+        //about us button click action starts
+
+        aboutusB.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // code here
+            }
+        });
+     //navigation bar START
         // Create the AccountHeader
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -80,6 +145,6 @@ public class Settings extends AppCompatActivity
                 .build();
 
     }
-
+             //navigation bar END
     }
 

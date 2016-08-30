@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mohammed.hatoon.hadeety">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,16 +19,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignupInterface" />
-        <activity
-            android:name=".Profile"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme" />
         <activity android:name=".add" />
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" />
         <activity android:name=".Search"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

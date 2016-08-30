@@ -13,7 +13,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Email"
+        android:id="@+id/edEmailLogin"
         android:layout_marginTop="83dp"
         android:drawableLeft="@drawable/mail"
         android:background="@drawable/border"
@@ -26,12 +26,12 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Password"
+        android:id="@+id/edPasswordLogin"
         android:drawableLeft="@drawable/lock"
         android:background="@drawable/border"
         android:padding="10dp"
-        android:hint="******"
-        android:layout_below="@+id/Email"
+        android:hint="Password"
+        android:layout_below="@+id/edEmailLogin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -39,41 +39,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign in"
-        android:id="@+id/signinbutton"
+        android:id="@+id/butSignin"
         android:background="@drawable/button"
-        android:layout_below="@+id/Password"
+        android:layout_below="@+id/edPasswordLogin"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp" />
+        android:layout_marginTop="21dp"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign in with Google"
-        android:id="@+id/googleSignin"
-
+        android:id="@+id/butGoogleSignin"
         android:background="@drawable/gbutton"
         android:backgroundTint="#DC4E41"
         android:textColor="#ffffff"
-
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:drawableRight="@drawable/google"
         android:layout_marginTop="69dp"
-        android:layout_below="@+id/signinbutton"
+        android:layout_below="@+id/butSignin"
         android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign in with twitter"
-        android:id="@+id/twitterSignin"
-
+        android:id="@+id/butTwitterSignin"
         android:background="@drawable/tbutton"
-
-        android:layout_below="@+id/googleSignin"
+        android:layout_below="@+id/butGoogleSignin"
         android:layout_marginTop="10dp"
-
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-
-
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:textColor="#FFFFFF"
         android:drawableRight="@drawable/twitter" />
@@ -82,25 +77,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:id="@+id/forgotPass"
-
-
-        android:layout_alignTop="@+id/signupTextView"
-        android:layout_toLeftOf="@+id/signinbutton"
-        android:layout_toStartOf="@+id/signinbutton" />
+        android:id="@+id/tvForgotPass"
+        android:layout_alignTop="@+id/tvSignup"
+        android:layout_toLeftOf="@+id/butSignin"
+        android:layout_toStartOf="@+id/butSignin" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
-        android:id="@+id/signupTextView"
+        android:id="@+id/tvSignup"
         android:layout_marginRight="26dp"
         android:layout_marginEnd="26dp"
-        android:layout_below="@+id/twitterSignin"
+        android:layout_below="@id/butTwitterSignin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
-        android:onClick="ShowSignupInterface"
+
         />
 
 </RelativeLayout>
