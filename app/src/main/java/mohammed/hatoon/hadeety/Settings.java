@@ -1,5 +1,8 @@
 package mohammed.hatoon.hadeety;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +19,12 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -24,6 +33,12 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Settings extends AppCompatActivity
          {
@@ -43,6 +58,8 @@ public class Settings extends AppCompatActivity
         Button changeUsernameB=(Button)findViewById(R.id.change_username_butt);
         Button logoutB=(Button)findViewById(R.id.logout_butt);
         Button aboutusB =(Button)findViewById(R.id.aboutus_butt);
+
+
 
         //edit profile button click action starts
 
@@ -89,7 +106,15 @@ public class Settings extends AppCompatActivity
 
             @Override
             public void onClick(View v) {
-                // code here
+                Intent logoutintent = new Intent(Settings.this, MainActivity.class);
+                startActivity(logoutintent);
+                SharedPreferences loginSharedPreferences;
+                loginSharedPreferences = getSharedPreferences(
+                        MainActivity.MyPREFERENCES, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = loginSharedPreferences.edit();
+                editor.putString("UniqueId", "");
+                editor.commit();
+                finish();
             }
         });
 
@@ -102,6 +127,7 @@ public class Settings extends AppCompatActivity
                 // code here
             }
         });
+
      //navigation bar START
         // Create the AccountHeader
         AccountHeader headerResult = new AccountHeaderBuilder()
@@ -145,6 +171,7 @@ public class Settings extends AppCompatActivity
                 .build();
 
     }
-             //navigation bar END
+
+
     }
 

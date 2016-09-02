@@ -80,7 +80,8 @@
         android:id="@+id/tvForgotPass"
         android:layout_alignTop="@+id/tvSignup"
         android:layout_toLeftOf="@+id/butSignin"
-        android:layout_toStartOf="@+id/butSignin" />
+        android:layout_toStartOf="@+id/butSignin"
+        android:clickable="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,6 +94,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
+        android:clickable="true"
 
         />
 

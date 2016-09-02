@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     EditText etEmail, etPassword;
     Button loginButton, googleLoginButton;
-    TextView registrationButton;
-
+    TextView registrationButton,tvForgotPass;
+    public static final String MyPREFERENCES = "MyPrefs";
     //Signing Options
     private GoogleSignInOptions gso;
     //google api client
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         registrationButton = (TextView) findViewById(R.id.tvSignup);
         loginButton = (Button) findViewById(R.id.butSignin);
         googleLoginButton = (Button) findViewById(R.id.butGoogleSignin);
-
+        tvForgotPass =(TextView)findViewById(R.id.tvForgotPass);
         //Initializing google signin option
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -79,6 +79,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         });
 
+        tvForgotPass.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent forgotPassIntent = new Intent(MainActivity.this, ChangePassword.class);
+                startActivity(forgotPassIntent);
+            }
+        });
     }
 
 
